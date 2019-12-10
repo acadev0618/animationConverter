@@ -1,0 +1,88 @@
+.text__element--container {
+    .element--name {
+        font-size: 20px;
+    }
+    #text__nav {
+        border-width: 2px;
+        border-color: var(--color-grey);
+        > .nav-item {
+            flex-grow: 1;
+            margin-bottom: -2px;
+            .nav-link {
+                /*display: block;*/
+                padding: 5px;
+                border-top: 0px;
+                border-left: 0px;
+                border-right: 0px;
+                border-bottom-width: 2px;
+                font-size: 12px;
+                color: var(--color-grey);
+                &.active{
+                    background-color: transparent;
+                    color: white;
+                }
+            }
+        }
+    }
+    #text__tab-content {
+        padding: 10px 0px;
+        .pane__helper{
+            font-size: 10px;
+            color: var(--color-grey);
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        #pane__custom-text {
+            .pane__body{
+                & > div{
+                    margin-bottom: 8px;
+                }
+            }
+        }
+        #pane__static-text {
+            .pane__body{
+                .static-text--list{
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0px -5px;
+                    .static-text__item{
+                        flex-basis: calc(100% / 2);
+                        flex-shrink: 0;
+                        flex-grow: 0;
+                        min-width: 0px;
+                        padding: 5px;
+                        .item--inner{
+                            background-color: rgba(255, 255, 255, 0.1);
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #pane__animated-text {
+            .pane__body{
+                .animated-text--list{
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0px -5px;
+                    .animated-text__item{
+                        flex-basis: calc(100% / 2);
+                        flex-shrink: 0;
+                        flex-grow: 0;
+                        min-width: 0px;
+                        padding: 5px;
+                        .item--inner{
+                            background-color: rgba(255, 255, 255, 0.1);
+                            cursor: pointer;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

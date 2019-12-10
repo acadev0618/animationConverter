@@ -1,0 +1,595 @@
+/*
+Created by: Jyostna Designs
+
+[TABLE OF CONTENTS]
+
+1.  RESET STYLES
+2.  HEADER STYLES
+    2.1 HEADER LEFT
+    2.2 HEADER RIGHT SIDE DROPDOWNS
+3. LEFT SIDEBAR
+4. MAIN WRAPPER STYLES
+5. LEFT MENU COLLAPSE STYLES
+6. CUSTOM STYLES
+7. MEDIA QUERIES
+
+*/
+/*===import bootstrap variables===*/
+@import "~bootstrap/scss/functions";
+@import "bootstrap/variables";
+@import "~common/sass/variables";
+
+/*****  1.RESET STYLES  *****/
+
+html {
+    background: none repeat scroll 0 0 #fff;
+    overflow-x: hidden;
+    transition: all .25s ease-out;
+    font-size: small;
+}
+
+html, body {
+    font-size: 14px;
+}
+
+html,
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: $font-family-base;
+}
+
+body {
+    background: none repeat scroll 0 0 #fff;
+    overflow-x: hidden;
+    transition: all .25s ease-out;
+    font-size: small;
+    width: 100%;
+    margin: 0 !important;
+}
+
+body,
+#app,
+#app > div,
+#app div.wrapper {
+    min-height: calc(100vh - 102px);
+}
+
+ul {
+    list-style: none;
+}
+
+label {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+a:hover,
+a {
+    text-decoration: none !important;
+}
+
+.table > thead > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > th,
+.table > tbody > tr > td,
+.table > tfoot > tr > th,
+.table > tfoot > tr > td {
+    vertical-align: middle;
+}
+
+/**Dropdown menus**/
+
+.dropdown-menu {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2300;
+    margin-top: 0;
+    border: none;
+    outline: none;
+}
+
+/*********6. CUSTOM STYLES *********/
+
+.submenu-content .name {
+    vertical-align: text-top !important;
+}
+
+/*text-area resize*/
+
+.resize_vertical {
+    resize: vertical;
+}
+
+h4.card-header {
+    font-size: 16px;
+}
+
+.card {
+    margin-bottom: 25px;
+}
+
+/**************card bg colors*******************/
+
+.bg-primary-card {
+    border: 1px solid $primary;
+
+    > .card-header {
+        background-color: $primary;
+        color: #fff;
+    }
+}
+
+.bg-info-card {
+    border: 1px solid $info;
+
+    > .card-header {
+        background-color: $info;
+        color: #fff;
+    }
+}
+
+.bg-warning-card {
+    border: 1px solid $warning;
+
+    > .card-header {
+        background-color: $warning;
+        color: #fff;
+    }
+}
+
+.bg-danger-card {
+    border: 1px solid $danger;
+
+    > .card-header {
+        background-color: $danger;
+        color: #fff;
+    }
+}
+
+.bg-success-card {
+    border: 1px solid $success;
+
+    > .card-header {
+        background-color: $success;
+        color: #fff;
+    }
+}
+
+.bg-primary-card:hover,
+.bg-info-card:hover,
+.bg-danger-card:hover,
+.bg-warning-card:hover,
+.bg-success-card:hover,
+.card:hover {
+    box-shadow: 1px 1px 38px -8px #8e8c8e;
+}
+
+.btn-link,
+.btn {
+    cursor: pointer;
+}
+
+/*=======hide unwanted content in print======*/
+
+@media print {
+    header.header,
+    aside.left-aside,
+    section.content-header,
+    #scroll {
+        display: none !important;
+    }
+    .table-responsive {
+        display: inline-table;
+        width: 100%;
+    }
+}
+
+/*=======hide unwanted content in print======*/
+
+/*============header styles=======*/
+
+header .navbar-right {
+    .dropdown-menu {
+        padding: 0;
+    }
+
+    .dropdownheader .nav.nav-tabs,
+    .dropdown-footer,
+    .dropdownheader:hover .nav.nav-tabs,
+    .dropdown-footer:hover {
+        background: $header_color;
+        color: $footer_color;
+        border: 1px solid #ccc;
+    }
+
+    .show > .btn-secondary.dropdown-toggle {
+        background-color: $dropdown_background_color;
+        color: #000;
+        border-color: $dropdown_background_color;
+    }
+
+    .btn-link:focus,
+    .btn-link:hover,
+    .btn-link:active {
+        text-decoration: none;
+    }
+
+    .btn .btn:active {
+        border: none;
+    }
+
+    .btn-group {
+        > button {
+            vertical-align: top;
+            color: $right_side_user;
+
+            &:hover {
+                background-color: #ededed;
+                color: #000;
+            }
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .notifications-menu .dropdown-menu.dropdown-menu-right {
+        right: -123px;
+    }
+}
+
+.notifications-menu .dropdown-menu {
+    width: 300px;
+}
+
+.dropdownheader .nav-tabs .nav-link {
+    color: $nav_tab_color;
+}
+
+.dropdown-menu .nav-tabs .nav-link:focus,
+.dropdown-menu .nav-tabs .nav-link:hover {
+    border-color: transparent;
+}
+
+.dropdown-menu .nav-tabs .nav-link.active,
+.dropdown-menu .nav-tabs .nav-item.show .nav-link {
+    color: #000;
+    background-color: #eee;
+    border-left: 1px transparent;
+    border-right: 1px transparent;
+    border-top: 1px transparent;
+}
+
+.nav-tabs > li > a {
+    color: $nav_tabs_color;
+}
+
+.drpodowtext {
+    color: #333;
+    transition: 300ms;
+}
+
+.drpodowtext:hover {
+    margin-left: 12px;
+    transition: 300ms;
+}
+
+.dropdown_content a {
+    width: 100%;
+    display: block;
+    padding: 10px 15px;
+}
+
+.dropdown-item img {
+    height: 50px;
+    width: 50px;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #111;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.btn-secondary:focus,
+.btn-secondary.focus {
+    box-shadow: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+/*============header styles=======*/
+
+/*=======form-elements======*/
+
+.drp_align .dropdown-menu {
+    left: -100%;
+}
+
+.form_elemntsdropdown .dropdown-item {
+    padding: 10px 15px;
+}
+
+/*=======form-elements======*/
+
+// ======= bs3 classes==
+.pull-right {
+    float: right;
+}
+
+.car-header:first-child {
+    border: none !important;
+}
+
+.pointer-cursor {
+    cursor: pointer;
+}
+
+.hover-link {
+    cursor: pointer;
+    color: #6471d6;
+
+    &:hover {
+        text-decoration: underline !important;
+    }
+}
+
+.bg-board {
+    background-color: #f2f2f2 !important;
+}
+
+// layout class
+.min-width-0 {
+    min-width: 0px !important;
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.v-select.app--select {
+    background-color: rgba(223, 224, 230, 0.6);
+    color: #2e3246;
+    font-size: 12px;
+    .vs__dropdown-toggle{
+        padding: 1px 0px;
+        border-radius: 1px;
+        border: none;
+        .vs__selected-options{
+            .vs__selected{
+                margin-top: 0px;
+                font-size: 12px;
+                color: #2e3246;
+            }
+        }
+        .vs__actions{
+            .vs__open-indicator{
+                display: block;
+                width: 25px;
+                height: 25px;
+                position: relative;
+                &:before{
+                    content: '';
+                    display: block;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-top: 5px solid #2e3246;
+                    height: 0;
+                    width: 0;
+                    line-height: 28px;
+                    margin-left: 8px;
+                    margin-top: 10px;
+                    position: absolute;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+    .vs__dropdown-menu {
+        top: calc(100% + 5px);
+        min-width: 0px;
+        background-color: white;
+        li{
+            padding: 0px 10px;
+            font-size: 12px;
+            color: #2e3246;
+            height: 28px;
+            align-items: center;
+            display: flex;
+            span {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 28px;
+                background-repeat: no-repeat;
+                background-size: auto 14px;
+                background-position: 10px center;
+            }
+            &:hover{
+                background-color: rgba(223, 224, 230, 0.6);
+            }
+        }
+    }
+    &.vs--open{
+        .vs__dropdown-toggle{
+            .vs__selected{
+                position: relative;
+            }
+        }
+    }
+}
+[v-cloak] {
+    display: none;
+}
+.app-modal {
+    display: block;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+    z-index: 1080;
+    background-color: rgba(0, 0, 0, .5);
+    .modal__dialog{
+        max-width: 100%;
+        min-height: calc(100% - (1.75rem * 2));
+        margin: 1.75rem auto;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 200;
+        .modal__content {
+            background-color: white;
+            width: 100%;
+            .modal__header{
+                display: flex;
+                align-items: center;
+                padding: 15px;
+                border-bottom: 1px solid #e9ecef;
+                .modal__title{
+                    margin-bottom: 0px;
+                }
+            }
+            .modal__body{
+                padding: 15px;
+            }
+            .modal__footer{
+                display: flex;
+                align-items: center;
+                padding: 15px;
+                border-top: 1px solid #e9ecef;
+            }
+        }
+    }
+}
+.perfect-scroll-area{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.app-scrollbar {
+    padding-right: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+        width: 8px;
+    }
+    &::-webkit-scrollbar-button{
+
+    }
+    &::-webkit-scrollbar-track{
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track-piece {}
+    &::-webkit-scrollbar-thumb{
+        border-radius: 10px;
+        background-color: #cacac0;
+        //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    }
+}
+.app-loading--wrap{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 64px;
+    .vld-overlay{
+        .vld-background{
+            opacity: 0;
+        }
+        .vld-icon{
+        }
+    }
+}
+.dropdown.app__checkbox-dropdown{
+    .dropdown-menu{
+        .dropdown-item{
+            .styled-checkbox {
+                position: absolute; // take it out of document flow
+                opacity: 0; // hide it
+
+                & + label {
+                    position: relative;
+                    cursor: pointer;
+                    padding: 0;
+                    margin-bottom: 0px;
+                }
+
+                // Box.
+                & + label:before {
+                    content: '';
+                    margin-right: 10px;
+                    display: inline-block;
+                    vertical-align: text-top;
+                    width: 20px;
+                    height: 20px;
+                    background: white;
+                    border: 1px solid rgba(0, 0, 0, .3);
+                    border-radius: 2px;
+                }
+
+                // Box hover
+                &:hover + label:before {
+                    background: #526ede;
+                    border-color: #526ede;
+                }
+
+                // Box focus
+                &:focus + label:before {
+                    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+                }
+
+                // Box checked
+                &:checked + label:before {
+                    background: #526ede;
+                    border-color: #526ede;
+                }
+
+                // Disabled state label.
+                &:disabled + label {
+                    color: #b8b8b8;
+                    cursor: auto;
+                }
+
+                // Disabled box.
+                &:disabled + label:before {
+                    box-shadow: none;
+                    background: #ddd;
+                }
+
+                // Checkmark. Could be replaced with an image
+                &:checked + label:after {
+                    content: '';
+                    position: absolute;
+                    left: 5px;
+                    top: 9px;
+                    background: white;
+                    width: 2px;
+                    height: 2px;
+                    box-shadow:
+                        2px 0 0 white,
+                        4px 0 0 white,
+                        4px -2px 0 white,
+                        4px -4px 0 white,
+                        4px -6px 0 white,
+                        4px -8px 0 white;
+                    transform: rotate(45deg);
+                }
+            }
+            &:active{
+                background-color: transparent;
+                color: inherit;
+            }
+        }
+    }
+}

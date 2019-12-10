@@ -1,0 +1,18 @@
+.component-text-element{
+    .text-element{
+        width: 100%;
+        padding: 5px;
+        .element__content{
+            width: 100%;
+            .content--text{
+                width: 100%;
+                background-size: auto;
+                background-position: center;
+                background-repeat: no-repeat;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+    }
+}

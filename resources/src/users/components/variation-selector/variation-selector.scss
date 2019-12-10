@@ -1,0 +1,83 @@
+.component-variation-selector {
+    .modal__body {
+        .variation__list{
+            margin: 0px -10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            .list__item{
+                width: 160px;
+                padding: 10px;
+                .item__card{
+                    display: flex;
+                    height: 120px;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 10px;
+                    padding: 12px;
+                    background-color: rgb(96, 121, 225);
+                    border-radius: 2px;
+                    text-align: center;
+                    cursor: pointer;
+                    .card__content{
+                        background-color: white;
+                        transition: all .2s ease-out;
+                        .size__item {
+                            border-radius: 1px;
+                            border: none;
+                            text-align: center;
+                        }
+                        .x{
+                            color: white;
+                        }
+                        .btn-create {
+                            background-color: #fff;
+                            color: #2e3246;
+                            font-weight: bold;
+                            &[disabled] {
+                                background-color: rgb(115, 138, 228);
+                                color: #2e3246;
+                            }
+                        }
+                    }
+                    &:hover{
+                        .card__content{
+                            transform: scale(1.2);
+                            box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.15);
+                        }
+                    }
+                }
+                .item__text{
+                    text-align: center;
+                    .item__design{
+                        font-size: 13px;
+                        line-height: 13px;
+                        font-weight: bold;
+                        white-space: pre;
+                        margin-bottom: 3px;
+                    }
+                    .item__size{
+                        font-size: 12px;
+                        line-height: 12px;
+                    }
+                }
+                &.custom-create{
+                    .item__card{
+                        cursor: initial;
+                        .card__content {
+                            background-color: transparent;
+                        }
+                        &:hover{
+                            .card__content{
+                                transform: scale(1);
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .modal__footer {
+    }
+}

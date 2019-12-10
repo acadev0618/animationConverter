@@ -1,0 +1,10 @@
+#!/bin/sh
+#!/home/cimage/public_html/fontforge/bin/fontforge
+Open($2);
+Print($1);
+Print($2);
+Generate($1+"/fonts/"+$2:r+".ttf");
+Generate($1+"/fonts/"+$2:r+".eot");
+Generate($1+"/fonts/"+$2:r+".woff");
+Generate($1+"/fonts/"+$2:r+".svg");
+Quit(0);

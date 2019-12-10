@@ -1,0 +1,90 @@
+.video-editor-layers{
+    height: 100%;
+    padding: 7px;
+    background-color: white;
+    .group-layers-wrap{
+        .group-btn{
+            display: block;
+            padding: 0px 3px;
+            font-size: 10px;
+            border: 1px solid #a6a6a6;
+            border-radius: 2px;
+            &.active{
+                background-color: #526dde;
+                border-color: #526dde;
+                color: white;
+            }
+        }
+        .layers-txt-wrap{
+            padding: 0px 3px;
+            font-size: 10px;
+        }
+    }
+    .slide-nav-wrap{
+        .slide-txt{
+            font-size: 10px;
+            color: #d9dae0;
+        }
+        .nav-actions{
+            .slide-nav-action{
+                background-color: transparent;
+                border: none;
+                i{
+                    color: #96979d;
+                }
+                &:hover {
+                    i{
+                        color: #45464C;
+                    }
+                }
+                &[disabled], &[disabled]:hover{
+                    i{
+                        color: #d9dae0;
+                    }
+                }
+            }
+        }
+    }
+    .layer-list{
+        margin: 0px -7px;
+        .layer-item {
+            cursor: pointer;
+            padding: 8px;
+            .drag-icon{
+                line-height: 0;
+            }
+            .layer-type-icon{
+                line-height: 0;
+            }
+            .item-text{
+                font-size: 12px;
+                white-space: pre;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .visible-action{
+                line-height: 0;
+            }
+            color: #7d808a;
+            svg{
+                g, path{
+                    fill: #7d808a !important;
+                }
+            }
+            &.disabled{
+                color: rgba(81, 88, 115, 0.4);
+                svg{
+                    g, path{
+                        fill: rgba(81, 88, 115, 0.4) !important;
+                    }
+                }
+            }
+            &.selected{
+                background-color: rgba(223, 224, 230, 0.5);
+            }
+            &:hover{
+                background-color: rgba(223, 224, 230, 0.5);
+            }
+        }
+    }
+}

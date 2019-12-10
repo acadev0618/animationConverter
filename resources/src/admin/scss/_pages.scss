@@ -1,0 +1,236 @@
+.plans, .plan_create, .role-edit, .roles, .configs, .libraries-list, .library-edit, .library-upload, .template-list, .template-edit, .template-upload {
+    min-height: 82vh;
+    padding: 0 20px;
+    
+    .card {
+        min-height: 70vh;
+        
+        .VueTables {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 400px) {
+        padding: 0 10px;
+    }
+}
+
+.dz-message {
+    min-height: 200px;
+    padding-top: 3%;
+    background-color: #f1f1f1;
+    border: 2px dashed #ccc;
+}
+
+.user-list, .members-edit {
+    min-height: 82vh;
+    padding: 0 20px;
+    
+    .card {
+        .VueTables {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 400px) {
+        padding: 0 10px;
+    }
+}
+
+.plan_create {
+    .form-group {
+        label {
+            width: 30%;
+            justify-content: flex-end;
+            padding-right: 15px;
+        }
+        
+        > div {
+            width: 70%;
+            
+            .form-control {
+                width: 100% !important;
+            }
+        }
+    }
+    .vue-js-switch {
+        .v-switch-label {
+            &.v-right {
+                left: 23px !important;
+            }
+            &.v-left {
+                left: 7px !important;
+            }
+        }
+    }
+}
+
+.role-edit {
+    .form-group {
+        label {
+            width: 20%;
+            justify-content: flex-end;
+            padding-right: 15px;
+        }
+        
+        > div {
+            width: 40%;
+            
+            .form-control {
+                width: 100% !important;
+            }
+        }
+    }
+    
+    .vue-js-switch {
+        .v-switch-label {
+            &.v-right {
+                left: 23px !important;
+            }
+            &.v-left {
+                left: 7px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    .plan_create, .role-edit {
+        .form-group {
+            label {
+                width: 100%;
+                justify-content: flex-start;
+                padding-right: 0;
+            }
+            
+            > div {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.members-edit, .user-list {
+    .member-tab-title {
+        color: #4fc1e9;
+        font-weight: bold;
+        
+        &.active {
+            border-bottom-color: #f7f7f7;
+        }
+    }
+    
+    .form-group {
+        label {
+            width: 40%;
+            justify-content: flex-end;
+            padding-right: 15px;
+        }
+        
+        > div {
+            width: 60%;
+            
+            .form-control {
+                width: 100% !important;
+                border-radius: 0;
+            }
+        }
+    }
+    
+    .multiselect {
+        min-height: 30px;
+        
+        .multiselect__tags {
+            border-radius: 0;
+            min-height: 30px;
+            padding: 0 40px 0 8px;
+            border: 1px solid #ced4da;
+        }
+        
+        .multiselect__select {
+            height: 30px;
+            
+            &:before {
+                top: 80%;
+            }
+        }
+        
+        .multiselect__input, .multiselect__single {
+            min-height: 30px;
+            line-height: 30px;
+            margin-bottom: 0;
+            border-radius: 0;
+            
+            &::placeholder {
+                color: #aeaeae;
+            }
+        }
+        
+        .multiselect__option {
+            min-height: 30px;
+            padding: 8px 12px;
+        }
+        
+        .multiselect__option--highlight:after {
+            line-height: 32px;
+        }
+        
+        .multiselect__placeholder {
+            margin-bottom: 8px;
+            padding-top: 4px;
+        }
+    }
+}
+
+.user-list {
+    .card {
+        border-radius: 0;
+        
+        .card-header {
+            &:first-child {
+                border-radius: 0;
+            }
+            
+            .pull-right {
+                a.btn {
+                    padding: 0;
+                }
+            }
+            
+            .fa-angle-up, .fa-angle-down {
+                font-size: 14px;
+            }
+            
+            .collapsed > .fa-angle-up, :not(.collapsed) > .fa-angle-down {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    .members-edit, .user-list {
+        .form-group {
+            label {
+                width: 100%;
+                justify-content: flex-start;
+                padding-right: 0;
+            }
+            
+            > div {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.libraries-list, .template-list {
+    .tab-title {
+        color: #4fc1e9;
+        font-weight: bold;
+        
+        &.active {
+            border-bottom-color: #f7f7f7;
+        }
+    }
+}

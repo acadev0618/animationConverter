@@ -1,0 +1,98 @@
+.bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 95px;
+    text-align: center;
+    color: #6C6C6E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #203548;
+    font-size: 20px;
+}
+
+.login, .register, .forgot-password {
+    width: 100%;
+    padding: 0;
+    
+    .auth-form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - 95px);
+        
+        .login-area {
+            text-align: center;
+            border: 3px solid #D1D1D1;
+            border-radius: 6px;
+            padding: 20px 40px;
+            background-color: #F8F8F8;
+            @media (max-width: 400px) {
+                padding: 10px 20px;
+            }
+            
+            .login-btn {
+                color: #fff;
+                height: 45px;
+                font-weight: bold;
+                font-size: 16px;
+                border-radius: 8px;
+            }
+            
+            .login-input {
+                border: 3px solid #D1D1D1;
+                border-radius: 6px;
+                line-height: 38px;
+                height: 40px;
+            }
+            
+            .register-link a {
+                color: #0174C7;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.login {
+    .auth-form {
+        .login-area {
+            .login-btn {
+                border: 3px solid #00619E;
+                background-color: #0174C7;
+            }
+            
+            .forgot-link {
+                border-left: 1px solid #727272;
+                height: 18px;
+                margin-top: 4px;
+                
+                a {
+                    color: #727272;
+                    font-size: 16px;
+                    top: -4px;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+
+.register, .forgot-password {
+    .auth-form {
+        .login-area {
+            .login-btn {
+                border: 3px solid #169e0f;
+                background-color: #409e3b;
+            }
+            
+            .register-link {
+                font-size: 16px;
+                font-weight: 500;
+                color: #666666;
+            }
+        }
+    }
+}

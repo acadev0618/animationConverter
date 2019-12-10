@@ -1,0 +1,28 @@
+.featureTextWhite, .featureTextGreen, .featureTextBlack {
+    text-align: center;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+}
+
+.featureTextWhite {
+    color: white;
+    font-weight: normal;
+}
+
+.featureTextGreen {
+    color: #91e600;
+    font-weight: bold;
+}
+
+.featureTextBlack {
+    color: #000000;
+    font-weight: bold;
+}
+
+.featureTextMinor {
+    color: #cccccc;
+    font-weight: normal;
+    font-size: 20px;
+    position: absolute;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+    visibility: hidden;
+}

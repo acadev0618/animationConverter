@@ -1,0 +1,292 @@
+.image-element-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .element--name {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    #image__nav {
+        margin-bottom: 10px;
+        border: 1px solid var(--color-grey);
+        border-radius: 10px;
+        overflow: hidden;
+        > .nav-item {
+            flex-grow: 1;
+            border-right: 1px solid var(--color-grey);
+            .nav-link {
+                font-size: 10px;
+                padding: 5px;
+                border: none;
+                text-align: center;
+                color: var(--color-grey);
+                &.active{
+                    background-color: transparent;
+                    color: white;
+                }
+            }
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+    #image__content {
+        flex-basis: 0px;
+        min-height: 0px;
+        flex-grow: 1;
+        #image__stock-photos {
+            flex-direction: column;
+            height: 100%;
+            .search-wrap{
+                background-color: rgba(255, 255, 255, 0.1);
+                margin-bottom: 10px;
+                align-items: center;
+                .search__find{
+                    padding: 3px 5px;
+                    svg{
+                        fill: rgba(255, 255, 255, 0.4);
+                    }
+                }
+                .search__input--wrap{
+                    flex-grow: 1;
+                    flex-basis: 0px;
+                    min-width: 100px;
+                    .search__input{
+                        width: 100%;
+                        padding: 3px 5px;
+                        background-color: transparent;
+                        border: none;
+                        color: white;
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                }
+                .search__clear{
+                    padding: 5px;
+                    svg{
+                        fill: rgba(255, 255, 255, 0.4);
+                    }
+                }
+            }
+            .stock-photo--wrap{
+                flex-basis: 0px;
+                flex-grow: 1;
+                min-height: 0px;
+                .stock-photo--list {
+                    display: flex;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    margin: 0px -5px;
+                    .list__column {
+                        flex-basis: calc(100% / 3);
+                        flex-grow: 0;
+                        padding: 5px;
+                        .stock-photo__item{
+                            margin-bottom: 10px;
+                            img{
+                                width: 100%;
+                            }
+
+                        }
+                    }
+                }
+            }
+            &.active{
+                display: flex;
+            }
+        }
+        #image__my-images{
+            .upload-section{
+                position: relative;
+                margin-bottom: 10px;
+                padding: 10px;
+                background-color: #434759;
+                text-align: center;
+                .upload__image{
+                    display: inline-block;
+                    padding: 5px 10px;
+                    color: white;
+                    background-color: #696c7a;
+                    border-radius: 3px;
+                    span{
+                        font-size: 10px;
+                        vertical-align: middle;
+                    }
+                    svg {
+                        fill: white;
+                    }
+                }
+                .upload__drag-txt{
+                    span{
+                        font-size: 10px;
+                        color: var(--color-grey);
+                    }
+                    i{
+                        display: inline-block;
+                        background-color: #3a3f51;
+                        padding: 3px 3px;
+                        line-height: 0;
+                        svg {
+                            fill: white;
+                        }
+                    }
+                }
+                .upload__input {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+            }
+            .result-section{
+                .result__show-txt{
+                    margin-bottom: 5px;
+                    font-size: 10px;
+                    color: var(--color-grey);
+                }
+                .result__list {
+                    display: flex;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    margin: 0px -5px;
+                    .list__column {
+                        flex-basis: calc(100% / 3);
+                        flex-grow: 0;
+                        padding: 5px;
+                        .stock-photo__item{
+                            margin-bottom: 10px;
+                            img{
+                                width: 100%;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+        #image__scale-settings {
+            .setting--wrap{
+                .scale__mode-label{
+                    font-size: 10px;
+                }
+                .scale__mode-select{
+
+                }
+                .scale__align-label{
+                    font-size: 10px;
+                }
+                .scale__layout-align{
+                    .scale__align {
+                        position: relative;
+                        width: 36px;
+                        height: 36px;
+                        --point-size: 9px;
+                        .align--top-left {
+                            top: 0;
+                            left: 0;
+                        }
+                        .align--top-center {
+                            top: 0;
+                            left: calc(100% / 2 - var(--point-size) / 2);
+                        }
+                        .align--top-right {
+                            top: 0;
+                            right: 0px;
+                        }
+                        .align--center-left {
+                            top: calc(100% / 2 - var(--point-size) / 2);
+                            left: 0px;
+                        }
+                        .align--center-center {
+                            top: calc(100% / 2 - var(--point-size) / 2);
+                            left: calc(100% / 2 - var(--point-size) / 2);
+                        }
+                        .align--center-right {
+                            top: calc(100% / 2 - var(--point-size) / 2);
+                            right: 0px;
+                        }
+                        .align--bottom-left {
+                            bottom: 0;
+                            left: 0px;
+                        }
+                        .align--bottom-center {
+                            bottom: 0;
+                            left: calc(100% / 2 - var(--point-size) / 2);
+                        }
+                        .align--bottom-right {
+                            bottom: 0;
+                            right: 0px;
+                        }
+                        .line--top-left {
+                            width: calc((100% - var(--point-size) * 3) / 2);
+                            height: 2px;
+                            top: calc((var(--point-size) - 2px) / 2);
+                            left: var(--point-size);
+                        }
+                        .line--top-right {
+                            width: calc((100% - var(--point-size) * 3) / 2);
+                            height: 2px;
+                            top: calc((var(--point-size) - 2px) / 2);
+                            right: var(--point-size);
+                        }
+                        .line--bottom-left {
+                            width: calc((100% - var(--point-size) * 3) / 2);
+                            height: 2px;
+                            bottom: calc((var(--point-size) - 2px) / 2);
+                            left: var(--point-size);
+                        }
+                        .line--bottom-right {
+                            width: calc((100% - var(--point-size) * 3) / 2);
+                            height: 2px;
+                            bottom: calc((var(--point-size) - 2px) / 2);
+                            right: var(--point-size);
+                        }
+                        .line--left-top {
+                            top: var(--point-size);
+                            left: calc((var(--point-size) - 2px) / 2);
+                            width: 2px;
+                            height: calc((100% - var(--point-size) * 3) / 2);
+                        }
+                        .line--left-bottom {
+                            bottom: var(--point-size);
+                            left: calc((var(--point-size) - 2px) / 2);
+                            width: 2px;
+                            height: calc((100% - var(--point-size) * 3) / 2);
+                        }
+                        .line--right-top {
+                            top: var(--point-size);
+                            right: calc((var(--point-size) - 2px) / 2);
+                            width: 2px;
+                            height: calc((100% - var(--point-size) * 3) / 2);
+                        }
+                        .line--right-bottom {
+                            bottom: var(--point-size);
+                            right: calc((var(--point-size) - 2px) / 2);
+                            width: 2px;
+                            height: calc((100% - var(--point-size) * 3) / 2);
+                        }
+                        > .align__line {
+                            position: absolute;
+                            background-color: rgba(81, 88, 115, 0.6);
+                        }
+                        > .align__dir {
+                            height: var(--point-size);
+                            width: var(--point-size);
+                            position: absolute;
+                            border: 2px solid rgba(81, 88, 115, 0.6);
+                            border-radius: 1px;
+                            cursor: pointer;
+                            &:hover{
+                                background: rgba(81, 88, 115, 0.6);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

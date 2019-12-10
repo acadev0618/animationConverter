@@ -1,0 +1,75 @@
+.component-transition-toolbar{
+    width: 100%;
+    height: auto;
+    padding: 12px;
+    background-color: white;
+    box-shadow: 0 0 30px 0 rgba(81, 88, 115, 0.2);
+    color: #2e3246;
+    .toolbar__header{
+        margin: -12px -12px 10px;
+        padding: 12px;
+        background-color: rgba(223, 224, 230, 0.6);
+        .toolbar__name {
+            font-size: 13px;
+            font-weight: bold;
+        }
+    }
+    .toolbar__body{
+        section {
+            margin-bottom: 10px;
+            .section__name{
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            .section__header{
+                margin-bottom: 5px;
+                .section__name{
+                    margin-bottom: 0px;
+                }
+                .section__value{
+                    font-weight: bold;
+                }
+            }
+            &.in-out--select{
+                background: rgba(223, 224, 230, 0.6);
+                border-radius: 2px;
+                padding: 3px;
+                .in-out__item{
+                    padding: 8px 10px;
+                    line-height: 0;
+                    border-radius: 2px;
+                    cursor: pointer;
+                    svg{
+                        vertical-align: middle;
+                        margin-right: 10px;
+                    }
+                    span{
+                        vertical-align: middle;
+                    }
+                    &.selected{
+                        background: #526ede;
+                        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .1);
+                        svg{
+                            fill: white;
+                        }
+                        span{
+                            color: white;
+                        }
+                    }
+                }
+            }
+            &.animation--select{
+                .play-icon{
+                    padding: 8px;
+                    line-height: 0;
+                    background: #526ede;
+                    cursor: pointer;
+                    border-radius: 2px;
+                    svg{
+                        fill: white;
+                    }
+                }
+            }
+        }
+    }
+}

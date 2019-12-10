@@ -1,0 +1,26 @@
+.image-element{
+    width: 100%;
+    height: 100%;
+    .element__content{
+        width: 100%;
+        height: 100%;
+        .content--image{
+            width: 100%;
+            height: 100%;
+            &[fill=scale_crop] {
+                background-size: auto;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            &[fill=no_scale] {
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            &[fill=exact_fit] {
+                background-size: 100% 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

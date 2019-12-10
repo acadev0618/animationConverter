@@ -1,0 +1,98 @@
+.main-content {
+    &#dashboard-panel * {
+        color: #112C41;
+    }
+
+    .breadcrumb-line {
+        * {
+            font-size: 24px;
+        }
+
+        .breadcrumb {
+            background-color: transparent;
+            margin-bottom: 0;
+
+            li {
+                a {
+                    color: #112C41;
+                }
+            }
+        }
+    }
+
+    .header {
+        padding: 0 1rem;
+
+        .header-title {
+            font-size: 34px;
+            font-weight: bold;
+            padding-bottom: 1rem;
+        }
+
+        .header-description {
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .page {
+        padding: 0 1rem;
+
+        .page-header {
+            padding: 0.5rem 0;
+
+            .page-header-title {
+                text-decoration: underline;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+
+        .page-body {
+            .tutorial-thumb {
+                width: 359px;
+                margin-top: 10px;
+
+                a {
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    .tutorial-label {
+                        font-size: 32px;
+                        font-weight: bold;
+                        color: #112C41;
+                        position: absolute;
+                        opacity: 0.6;
+                    }
+
+                    i {
+                        font-size: 50px;
+                        color: #112C41;
+                        position: absolute;
+                        margin-top: -22px;
+                        opacity: 0.6;
+                    }
+
+                    .create-label {
+                        font-size: 32px;
+                        font-weight: bold;
+                        color: #112C41;
+                        position: absolute;
+                        margin-top: 18px;
+                        opacity: 0.6;
+                    }
+                }
+            }
+
+            &.flex-body {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

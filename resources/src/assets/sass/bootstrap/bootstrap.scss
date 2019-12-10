@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700,italic,bolditalic");
+
+//=============Over ride =====
+$font-family-sans-serif: 'Open Sans', sans-serif, verdana !default;
+@import "~bootstrap/scss/functions";
+
+@import "variables";
+@import "google-fonts";
+@import url('https://fonts.googleapis.com/css?family=Anton&subset=latin-ext,vietnamese');
+// Core variables and mixins
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url('~assets/sass/fonts/CaviarDreams.svg?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('~assets/sass/fonts/CaviarDreams.woff') format('woff'), /* Modern Browsers */
+    url('~assets/sass/fonts/CaviarDreams.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('~assets/sass/fonts/CaviarDreams.svg#CaviarDreams.ttf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Code Bold';
+    src: url('~assets/sass/fonts/CODEBold.svg?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('~assets/sass/fonts/CODEBold.woff') format('woff'), /* Modern Browsers */
+    url('~assets/sass/fonts/CODEBold.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('~assets/sass/fonts/CODEBold.svg#CODEBold.ttf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Code Light';
+    src: url('~assets/sass/fonts/CODELight.svg?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('~assets/sass/fonts/CODELight.woff') format('woff'), /* Modern Browsers */
+    url('~assets/sass/fonts/CODELight.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('~assets/sass/fonts/CODELight.svg#CODELight.ttf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Gobold Bold';
+    src: url('~assets/sass/fonts/GoboldBold.svg?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('~assets/sass/fonts/GoboldBold.woff') format('woff'), /* Modern Browsers */
+    url('~assets/sass/fonts/GoboldBold.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('~assets/sass/fonts/GoboldBold.svg#GoboldBold.ttf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Nexa Black';
+    src: url('~assets/sass/fonts/NexaBlack.svg?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('~assets/sass/fonts/NexaBlack.woff') format('woff'), /* Modern Browsers */
+    url('~assets/sass/fonts/NexaBlack.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('~assets/sass/fonts/NexaBlack.svg#NexaBlack.ttf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Nexa Rust Script L';
+    src: url('~assets/sass/fonts/NexaRustScriptL-0.svg?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('~assets/sass/fonts/NexaRustScriptL-0.woff') format('woff'), /* Modern Browsers */
+    url('~assets/sass/fonts/NexaRustScriptL-0.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('~assets/sass/fonts/NexaRustScriptL-0.svg#NexaBlack.ttf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Nexa Rust Extras Free';
+    src: url('~assets/sass/fonts/NexaRustExtras-Free.svg?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('~assets/sass/fonts/NexaRustExtras-Free.woff') format('woff'), /* Modern Browsers */
+    url('~assets/sass/fonts/NexaRustExtras-Free.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('~assets/sass/fonts/NexaRustExtras-Free.svg#NexaBlack.ttf') format('svg'); /* Legacy iOS */
+}
+
+body, #app {
+    min-height: 100vh;
+    .dashboard span {
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+html, body {
+    font-family: Montserrat, sans-serif;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #000;
+    background-color: #fff;
+    .popover ul li, .popover span {
+        font-family: 'Montserrat', sans-serif !important;
+    }
+}

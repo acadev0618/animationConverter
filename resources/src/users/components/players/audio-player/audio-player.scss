@@ -1,0 +1,10 @@
+.component-audio-player {
+    margin-top: 10px;
+    .item__volume-icon{
+        svg{
+            fill: var(--color-grey);
+        }
+    }
+    .item__progress{
+    }
+}

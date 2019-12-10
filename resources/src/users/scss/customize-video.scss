@@ -1,0 +1,179 @@
+@import "~vue-select/src/scss/vue-select.scss";
+.site-wrapper {
+    padding-top: 60px;
+    height: 100vh;
+    .user-header{
+        .navbar{
+            .back-to-main{
+                align-self: normal;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #267FD1;
+                border-radius: 0px;
+                svg{
+                    fill: white;
+                }
+            }
+        }
+    }
+    .page-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        .layout-header{
+            flex-grow: 0;
+            .page-header-wrap{
+                padding: 15px 25px;
+                background-image: linear-gradient(to bottom, #267fd1, #0ab1cd);
+                border-top: 1px solid #6bbfe1;
+                color: white;
+                font-size: 20px;
+                .search-wrap{
+                    span{
+                        font-size: 20px;
+                    }
+                    input{
+                        width: 270px;
+                        border: none;
+                        background-color: transparent;
+                        border-bottom: 2px solid #6bbfe1;
+                        font-size: 20px;
+                        color: white;
+                        &:focus{
+                            border-top: none;
+                        }
+                    }
+                }
+                .history-nav-wrap {
+                    .nav-arrow{
+                        display: inline-block;
+                        margin: 0px 10px;
+                        cursor: pointer;
+                        svg{
+                            width: 30px;
+                            height: 30px;
+                            fill: rgba(255, 255, 255, .7);
+                        }
+                        &[disabled], &[disabled]:hover{
+                            opacity: .3;
+                            svg{
+                                fill: rgba(255, 255, 255, .7);
+                            }
+                        }
+                        &:hover{
+                            svg{
+                                fill: rgba(255, 255, 255, 1);
+                            }
+                        }
+                    }
+                }
+                .zoom-wrap{
+                    position: relative;
+                    .zoom-action{
+                        line-height: 0;
+                        opacity: .7;
+                        svg{
+                            fill: rgba(255, 255, 255, 1);
+                        }
+                        &:hover{
+                            opacity: 1;
+                        }
+                    }
+                    .zoom-value{
+                        width: 50px;
+                        cursor: pointer;
+                        .zoom__popup {
+                            display: none;
+                            position: absolute;
+                            top: calc(100%);
+                            right: -25px;
+                            width: 100px;
+                            padding: 10px 0px 5px;
+                            z-index: 10;
+                            color: #f0f1f5;
+                            .zoom__list {
+                                background-color: #2e3246;
+                                position: relative;
+                                padding: 5px 0px;
+                                .list__item {
+                                    padding: 5px 15px;
+                                    font-size: 12px;
+                                    cursor: pointer;
+                                    &:hover{
+                                        background-color: #1e2334;
+                                    }
+                                }
+                                &:before{
+                                    content: '';
+                                    display: block;
+                                    position: absolute;
+                                    border: 6px solid transparent;
+                                    border-bottom-color: #2e3246;
+                                    left: 50%;
+                                    top: -20px;
+                                    transform: translateX(-50%) translateY(8px);
+                                }
+                            }
+                        }
+                        &:hover{
+                            .zoom__popup{
+                                display: block;
+                            }
+                        }
+                    }
+                    .zoom__range-slider{
+                        width: 150px;
+                    }
+                }
+                .duration-wrap{
+                    font-size: 17px;
+                }
+                .save-export-wrap{
+                    display: flex;
+                    > button {
+                        font-size: 20px;
+                        border: none;
+                        border-radius: 3px;
+                        padding: 2px 20px;
+                        &.export-btn{
+                            background-color: #ff9900;
+                            color: white;
+                        }
+                    }
+                    .save-as-group{
+                        .btn{
+                            font-size: 20px;
+                            &.save-btn{
+                                padding-left: 20px;
+                                padding-right: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .layout-body{
+            min-height: 0px;
+            flex-grow: 1;
+            flex-basis: 100px;
+            position: relative;
+            .page-sidebar-wrap{
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                width: 400px;
+                height: 100%;
+                overflow: auto;
+            }
+            .page-content-wrap {
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                height: 100%;
+                width: calc(100% - 400px);
+            }
+        }
+    }
+}

@@ -1,0 +1,135 @@
+.component-color-toolbar {
+    width: 100%;
+    height: auto;
+    padding: 12px;
+    background-color: white;
+    box-shadow: 0 0 30px 0 rgba(81, 88, 115, 0.2);
+    color: #2e3246;
+    .toolbar__header{
+        margin: -12px -12px 10px;
+        padding: 12px;
+        background-color: rgba(223, 224, 230, 0.6);
+        .header__name {
+            font-size: 13px;
+            font-weight: bold;
+        }
+    }
+    .toolbar__body{
+        section{
+            margin-bottom: 10px;
+            .section__name{
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            .section__header{
+                margin-bottom: 5px;
+                .section__name{
+                    margin-bottom: 0px;
+                }
+                .section__value{
+                    font-weight: bold;
+                }
+            }
+            &.color{
+                position: relative;
+                .color__preview{
+                    border: 2px solid #dfe0e6;
+                    padding: 2px;
+                    border-radius: 3px;
+                    .preview--inner{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                .color__value{
+                    input{
+                        width: 64px;
+                        height: 28px;
+                        padding: 5px;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 28px;
+                        border: 2px solid #dfe0e6;
+                        color: #2e3246;
+                        &:focus{
+                            border-color: #526ede;
+                            outline: none;
+                        }
+                    }
+                }
+                .color__copy{
+                    padding: 2px;
+                    cursor: pointer;
+                    line-height: 0;
+                    svg{
+                    }
+                    &:hover{
+                        background: #dfe0e6;
+                    }
+                }
+            }
+            &.opacity{
+            }
+            &.drop-shadow{
+                margin: 0px -12px;
+                padding: 12px 12px 0px;
+                border-top: 1px solid #eee;
+                .section__header{
+                    .toggle-edit{
+                        .drop-shadow__color{
+                            position: relative;
+                            border: 2px solid #dfe0e6;
+                            padding: 2px;
+                            border-radius: 3px;
+                            cursor: pointer;
+                            .preview--inner{
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+                    }
+                }
+                .section__body{
+                    .shadow__detail-row {
+                        .detail__name{
+
+                        }
+                        .detail__value{
+                            font-size: 12px;
+                            height: 28px;
+                            width: 25px;
+                            border: none;
+                            border-bottom: 1px solid rgba(0, 0, 0, 0);
+                            text-align: right;
+                            padding-right: 3px;
+                            &:hover, &:focus{
+                                border-bottom-color: rgba(0, 0, 0, .2);
+                            }
+                            &:focus{
+                                outline: none;
+                            }
+                        }
+                        .detail__value--wrap{
+                            .detail__value{
+
+                            }
+                        }
+                        .detail__slider{
+
+                        }
+                        input::-webkit-outer-spin-button,
+                        input::-webkit-inner-spin-button {
+                            /* display: none; <- Crashes Chrome on hover */
+                            -webkit-appearance: none;
+                            margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+                        }
+
+                        input[type=number] {
+                            -moz-appearance:textfield; /* Firefox */
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

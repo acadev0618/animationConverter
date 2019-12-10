@@ -1,0 +1,100 @@
+.component-lottie-text-toolbar{
+    width: 100%;
+    height: auto;
+    padding: 12px;
+    background-color: white;
+    box-shadow: 0 0 30px 0 rgba(81, 88, 115, 0.2);
+    color: #2e3246;
+    .toolbar__header{
+        margin: -12px -12px 10px;
+        padding: 12px;
+        background-color: rgba(223, 224, 230, 0.6);
+        .header__name {
+            font-size: 13px;
+            font-weight: bold;
+        }
+    }
+    .toolbar__body{
+        font-size: 12px;
+        .text-layer--list{
+            .list__item{
+                margin: 0 -12px;
+                padding: 5px 12px 0px;
+                border-bottom: 1px solid rgba(223, 224, 230, 0.69);
+                section {
+                    margin-bottom: 5px;
+                    .section__name{
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                    }
+                    .section__header{
+                        margin-bottom: 5px;
+                        .section__name{
+                            margin-bottom: 0px;
+                        }
+                        .section__value{
+                            font-weight: bold;
+                        }
+                    }
+                    &.align{
+                        .align--list{
+                            display: flex;
+                            align-items: center;
+                            .list__item{
+                                padding: 3px;
+                                flex-grow: 1;
+                                text-align: center;
+                                cursor: pointer;
+                                &:hover{
+                                    background: #dfe0e6;
+                                    svg{
+                                        fill: #2e3246;
+                                    }
+                                }
+                                &.selected{
+                                    background: #526ede;
+                                    svg{
+                                        fill: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.font-size{
+                        input {
+                            background: rgba(223, 224, 230, 0.6);
+                            color: #2e3246;
+                            width: 50px;
+                            &:focus{
+                                outline: none;
+                            }
+                        }
+                    }
+                    &.text{
+                        input{
+                            display: block;
+                            width: 100%;
+                            box-shadow: none;
+                            border-radius: 3px;
+                            border: 2px solid #dfe0e6;
+                            color: #2e3246;
+                            cursor: text;
+                            font-family: inherit;
+                            font-size: 12px;
+                            height: 28px;
+                            outline: none;
+                            padding: 5px;
+                            line-height: 28px;
+                            &:focus{
+                                border-color: #526ede;
+                            }
+                        }
+                    }
+                }
+                &:last-child{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

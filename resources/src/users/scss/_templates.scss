@@ -1,0 +1,70 @@
+#templates-page {
+    .step-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        
+        .text-underline {
+            font-size: 16px;
+        }
+        
+        .step-line {
+            width: 80px;
+            height: 1px;
+            border: 1px solid #6e6e6e;
+            margin: 0 10px;
+        }
+        
+        .step-description {
+            max-width: 120px;
+            color: #6e6e6e;
+            
+            &.selected-step {
+                color: #000;
+            }
+        }
+    }
+    
+    .dropdown-menu {
+        padding: 2px;
+        .dropdown-item {
+            padding: 0.25rem 0.15rem 0.25rem 0;
+            margin: 0;
+            .custom-control {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                cursor: pointer;
+                
+                .custom-control-label {
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                    cursor: pointer;
+                    
+                    &:before {
+                        top: 0.35rem;
+                        left: -1.5rem;
+                    }
+                    
+                    &:after {
+                        width: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+    
+    #libraryTabContent {
+        .temp-row {
+            div.video-list {
+                width: 260px;
+                height: 215px;
+                .temp-card {
+                    height: 206px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.component-light-preview-template{
+    .modal__body{
+        .template__meta{
+            .meta__status{
+                text-transform: uppercase;
+                color: #73b0d1;
+                font-weight: bold;
+                font-size: 1.1em;
+            }
+            .meta__made-with{
+                .made-with__val{
+                    color: #73b0d1;
+                }
+            }
+        }
+        .template__main{
+            background-color: black;
+            margin: 0px -15px -15px;
+            .template__player--wrap{
+                max-width: 100%;
+                margin: 0px auto;
+            }
+            .template__preview--wrap{
+                max-width: 100%;
+                margin: 0px auto;
+            }
+        }
+    }
+    .modal__footer{
+        .action__item{
+            color: #373537;
+            svg{
+                width: 20px;
+                height: 20px;
+                fill: #373537;
+                vertical-align: middle;
+            }
+            span{
+                vertical-align: middle;
+            }
+            &.item__delete{
+                color: #f05a67;
+                svg{
+                    fill: #f05a67;
+                }
+                &:hover{
+                    color: #833139;
+                    svg{
+                        fill: #833139;
+                    }
+                }
+            }
+            &:hover{
+                color: black;
+                svg{
+                    fill: black;
+                }
+            }
+        }
+    }
+}
