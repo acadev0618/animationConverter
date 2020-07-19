@@ -19,7 +19,7 @@
         "free-transform": "^0.1.6",
         "jquery": "^3.2",
         "laravel-mix": "3.0.0",
-        "lodash": "^4.17.15",
+        "lodash": "^4.17.19",
         "popper.js": "^1.12",
         "pretty-checkbox-vue": "^1.1.9",
         "resolve-url-loader": "^2.3.1",
